@@ -8,7 +8,7 @@ const templates = [
     name: "Modern Professional",
     preview: "bg-gradient-to-br from-white to-gray-100",
     category: "Modern",
-    popularity: "Most Popular"
+    popularity: "Popular"
   },
   {
     name: "Clean Minimal",
@@ -65,7 +65,7 @@ const TemplateShowcase = () => {
                   <h3 className="font-medium">{template.name}</h3>
                   {template.popularity && (
                     <span className={`text-xs px-2 py-1 rounded-full ${
-                      template.popularity === 'Most Popular' ? 'bg-resumeRite-100 text-resumeRite-700' : 'bg-green-100 text-green-700'
+                      template.popularity === 'Popular' ? 'bg-resumeRite-100 text-resumeRite-700' : 'bg-green-100 text-green-700'
                     }`}>
                       {template.popularity}
                     </span>
