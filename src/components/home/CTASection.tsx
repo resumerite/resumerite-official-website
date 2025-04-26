@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
@@ -52,7 +53,9 @@ const CTASection = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button> */}
                 <Button size="lg" variant="outline">
-                  View Pricing
+                  <Link to="/pricing" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
+                    View Pricing
+                  </Link>
                 </Button>
               </div>
             </div>

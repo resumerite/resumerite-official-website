@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import LogoImg from '../../assets/logo.png'
+import LogoImg from '../../assets/resumerite.svg'
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -66,7 +66,7 @@ const Header = () => {
             <Link to="/#features" className="text-sm font-medium py-2" onClick={toggleMenu}>Features</Link>
             <Link to="/#templates" className="text-sm font-medium py-2" onClick={toggleMenu}>Templates</Link>
             <Link to="/#testimonials" className="text-sm font-medium py-2" onClick={toggleMenu}>Testimonials</Link>
-            <Link to="/#pricing" className="text-sm font-medium py-2" onClick={toggleMenu}>Pricing</Link>
+            <Link to="/pricing" className="text-sm font-medium py-2" onClick={toggleMenu}>Pricing</Link>
           </nav>
           <div className="flex flex-col gap-2">
             <Button variant="outline" onClick={() => { navigate('/login'); toggleMenu(); }}>Login</Button>
