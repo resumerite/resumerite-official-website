@@ -1,5 +1,5 @@
 import LogoImg from '../../assets/logo.png'
-import { Twitter, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,10 +14,10 @@ const Footer = () => {
               Build ATS-optimized resumes that stand out to both algorithms and recruiters.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-resumeRite-600">
+              {/* <a href="#" className="text-muted-foreground hover:text-resumeRite-600">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
-              </a>
+              </a> */}
               <a href="#" className="text-muted-foreground hover:text-resumeRite-600">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
@@ -26,10 +26,10 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-resumeRite-600">
+              {/* <a href="#" className="text-muted-foreground hover:text-resumeRite-600">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
-              </a>
+              </a> */}
             </div>
           </div>
           
@@ -40,18 +40,18 @@ const Footer = () => {
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">ATS Score Checker</a></li>
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">Job Description Matcher</a></li>
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">Templates</a></li>
-              <li><a href="#" className="text-foreground hover:text-resumeRite-600">Export Options</a></li>
+              {/* <li><a href="#" className="text-foreground hover:text-resumeRite-600">Export Options</a></li> */}
             </ul>
           </div>
           
           <div>
             <h3 className="font-medium text-sm mb-3 text-muted-foreground">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-foreground hover:text-resumeRite-600">Resume Tips</a></li>
+              {/* <li><a href="#" className="text-foreground hover:text-resumeRite-600">Resume Tips</a></li> */}
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">Career Blog</a></li>
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">Interview Prep</a></li>
               <li><a href="#" className="text-foreground hover:text-resumeRite-600">Job Search Guide</a></li>
-              <li><a href="#" className="text-foreground hover:text-resumeRite-600">Tutorials</a></li>
+              {/* <li><a href="#" className="text-foreground hover:text-resumeRite-600">Tutorials</a></li> */}
             </ul>
           </div>
           
@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} ResumeRite. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} resumerite. All rights reserved.</p>
         </div>
       </div>
     </footer>

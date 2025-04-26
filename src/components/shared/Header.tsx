@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/#testimonials" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
             Testimonials
           </Link>
-          <Link to="/#pricing" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
+          <Link to="/pricing" className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground">
             Pricing
           </Link>
         </nav>
