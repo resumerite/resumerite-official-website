@@ -4,7 +4,8 @@ import CountdownTimer from '@/components/shared/CountdownTimer';
 import NotificationForm from '@/components/shared/NotificationForm';
 import SocialLinks from '@/components/shared/SocialLinks';
 import { useIsMobile } from '@/hooks/use-mobile';
-import React from 'react'
+import LogoImg from '../assets/resumerite.svg'
+import { Link } from 'react-router-dom';
 import { Toaster } from 'sonner';
 
 const ComingSoon = () => {
@@ -23,9 +24,9 @@ const ComingSoon = () => {
          {/* Logo and title */}
          <div className="animate-fade-in-left" style={{ animationDelay: '0.1s' }}>
            <div className="flex items-center justify-center mb-4 md:mb-6">
-             {/* <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-dark rounded-full flex items-center justify-center text-white text-xl md:text-2xl font-bold animate-float">
-               resumerite
-             </div> */}
+                <Link to="/" className="flex items-center gap-2 bg-transparent">
+                    <img src={LogoImg} className='w-32 bg-transparent' alt='' />
+                </Link>
            </div>
            
            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-dark mb-3 md:mb-4">
