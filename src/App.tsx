@@ -9,6 +9,7 @@ import { AboutUs } from "./pages/AboutUs";
 import ResumeBuilder from "./pages/ResumeBuilder";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
+import ComingSoon from "./pages/ComingSoon";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<ComingSoon />} />
           <Route path="/aboutus" element={<AboutUs />} /> 
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />

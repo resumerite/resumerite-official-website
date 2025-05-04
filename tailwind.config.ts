@@ -73,7 +73,11 @@ export default {
     				'700': '#0958A8',
     				'800': '#084A8D',
     				'900': '#063C73'
-    			}
+    			},
+				blue: {
+					light: '#EFF7FF',
+					dark: '#0858A7'
+				}
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
