@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import AnimatedBackground from '@/components/shared/AnimatedBackground';
-import CountdownTimer from '@/components/shared/CountdownTimer';
+// import CountdownTimer from '@/components/shared/CountdownTimer';
 import NotificationForm from '@/components/shared/NotificationForm';
 import SocialLinks from '@/components/shared/SocialLinks';
 import { useIsMobile } from '@/hooks/use-mobile';
 import LogoImg from '../assets/resumerite.svg'
 import { Link } from 'react-router-dom';
-import { Toaster } from 'sonner';
+// import { Toaster } from 'sonner';
 
 const ComingSoon = () => {
 
@@ -40,9 +40,9 @@ const ComingSoon = () => {
          </p>
          
          {/* Countdown timer */}
-         <div className="mb-8 md:mb-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+         {/* <div className="mb-8 md:mb-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
            <CountdownTimer targetDate={launchDate} />
-         </div>
+         </div> */}
          
          {/* Notification form */}
          <div className="mb-6 md:mb-8">
@@ -63,7 +63,7 @@ const ComingSoon = () => {
          </div>
        </div>
        
-       <Toaster position="top-center" richColors />
+       {/* <Toaster position="top-center" richColors /> */}
      </div>
    );
 }
