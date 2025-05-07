@@ -36,7 +36,7 @@ const ComingSoon = () => {
          
          {/* Subtitle */}
          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-10 max-w-2xl mx-auto animate-fade-in-right" style={{ animationDelay: '0.3s' }}>
-           We're creating something amazing. Stay tuned for our launch!
+           We're working hard to bring you the ultimate resume building experience
          </p>
          
          {/* Countdown timer */}
@@ -47,7 +47,7 @@ const ComingSoon = () => {
          {/* Notification form */}
          <div className="mb-6 md:mb-8">
            <h2 className="text-lg md:text-xl font-semibold text-blue-dark mb-3 md:mb-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-             Get notified when we launch
+             Be the first to know when we launch!
            </h2>
            <div className="flex justify-center">
              <NotificationForm />

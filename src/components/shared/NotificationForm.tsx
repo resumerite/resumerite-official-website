@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -5,29 +6,49 @@ import { toast } from 'sonner';
 import { validateEmail } from '@/utils/validation';
 import { Bell } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
 const NotificationForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const isMobile = useIsMobile();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (!validateEmail(email)) {
       toast.error('Please enter a valid email address.');
       return;
     }
-    
+  
     setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      toast.success('Thank you! We will notify you when we launch.');
-      setEmail('');
-      setIsLoading(false);
-    }, 1500);
+  
+    try {
+      const result = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        { user_email: email },
+        PUBLIC_KEY
+      );
+  
+      if (result.status === 200) {
+        toast.success('Email sent! Check your inbox.');
+        setEmail('');
+      } else {
+        toast.error('Something went wrong.');
+      }
+    } catch (error) {
+      toast.error('Failed to send email.');
+    }
+  
+    setIsLoading(false);
   };
+  
 
   return (
     <div className="w-full max-w-md text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.7s' }}>
